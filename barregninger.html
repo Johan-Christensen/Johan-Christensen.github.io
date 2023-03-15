@@ -8,19 +8,28 @@
 			var id = document.getElementById("id").value;
 			var items = document.getElementById("items").value;
 
-			// Do something with the user inputs
-			alert("ID: " + id + "\nItems: " + items);
+			// Create a new CSV row with the user inputs
+			var newRow = id + "," + items + "\n";
+
+			// Write the CSV row to the file
+			var xhr = new XMLHttpRequest();
+			xhr.open("POST", "path/to/your/csv/file.csv", true);
+			xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+			xhr.send("data=" + newRow);
+
+			// Display a message to the user
+			alert("Your form has been submitted!");
 		}
 	</script>
 </head>
 <body>
-	<h1>Megaseminar</h1>
-	<p>Skriv dit tal, og antal genstande du køber</p>
+	<h1>Megaseminar bar</h1>
+	<p>Skriv dit tal, og hvor mange genstande du bestiller:</p>
 	<form>
-		<label for="id">Dit tal:</label>
+		<label for="id">Tal:</label>
 		<input type="text" id="id" name="id" maxlength="2"><br>
 
-		<label for="items">Antal genstande:</label>
+		<label for="items">Genstande:</label>
 		<input type="number" id="items" name="items" min="1"><br>
 
 		<input type="button" value="Submit" onclick="submitForm()">
