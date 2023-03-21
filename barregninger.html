@@ -1,38 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>My Website</title>
-	<script>
-		function submitForm() {
-			// Get the user inputs
-			var id = document.getElementById("id").value;
-			var items = document.getElementById("items").value;
-
-			// Create a new CSV row with the user inputs
-			var newRow = id + "," + items + "\n";
-
-			// Write the CSV row to the file
-			var xhr = new XMLHttpRequest();
-			xhr.open("POST", "https://github.com/Johan-Christensen/Johan-Christensen.github.io/blob/d0e2300807d0b03def35b0b170b003bd4305516b/barregninger.csv", true);
-			xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-			xhr.send("data=" + newRow);
-
-			// Display a message to the user
-			alert("Your form has been submitted!");
-		}
-	</script>
-</head>
-<body>
-	<h1>Megaseminar bar</h1>
-	<p>Skriv dit tal, og hvor mange genstande du bestiller:</p>
-	<form>
-		<label for="id">Tal:</label>
-		<input type="text" id="id" name="id" maxlength="2"><br>
-
-		<label for="items">Genstande:</label>
-		<input type="number" id="items" name="items" min="1"><br>
-
-		<input type="button" value="Submit" onclick="submitForm()">
-	</form>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Barregninger</title>
+  </head>
+  <body>
+    <h1>Barregninger</h1>
+    <form action="save_to_csv.php" method="POST">
+      <label for="dit_tal">Dit tal:</label>
+      <input type="number" id="dit_tal" name="dit_tal" required>
+      <br><br>
+      <label for="antal_genstande">Antal genstande:</label>
+      <input type="number" id="antal_genstande" name="antal_genstande" required>
+      <br><br>
+      <input type="submit" value="Gem">
+    </form>
+  </body>
 </html>
