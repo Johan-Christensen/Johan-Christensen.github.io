@@ -1,7 +1,19 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Barregninger</title>
+  </head>
+  <body>
+    <h1>Barregninger</h1>
+    <form action="save_to_csv.php" method="POST">
+      <label for="dit_tal">Dit tal:</label>
+      <input type="number" id="dit_tal" name="dit_tal" required>
+      <br><br>
+      <label for="antal_genstande">Antal genstande:</label>
+      <input type="number" id="antal_genstande" name="antal_genstande" required>
+      <br><br>
+      <input type="submit" value="Gem">
+    </form>
+  </body>
 </html>
