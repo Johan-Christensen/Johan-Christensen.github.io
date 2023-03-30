@@ -1,6 +1,6 @@
 // define the GitHub repository owner and name
-const owner = 'your-github-username';
-const repo = 'your-github-repository-name';
+const owner = 'Johan-Christensen';
+const repo = 'Johan-Christensen';
 
 // define the CSV file name
 const csvFile = 'barregninger.csv';
