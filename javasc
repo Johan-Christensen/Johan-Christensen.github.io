@@ -5,6 +5,9 @@ const repo = 'Johan-Christensen';
 // define the CSV file name
 const csvFile = 'barregninger.csv';
 
+// define the GitHub token
+const GITHUB_TOKEN = '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';
+
 // handle the form submission
 function handleSubmit(event) {
   event.preventDefault();
