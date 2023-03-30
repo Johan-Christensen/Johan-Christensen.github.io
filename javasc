@@ -8,7 +8,6 @@ const csvFile = 'barregninger.csv';
 // define the GitHub token
 const GITHUB_TOKEN = process.env.TOKEN_BAR;
 
-
 // handle the form submission
 function handleSubmit(event) {
   event.preventDefault();
